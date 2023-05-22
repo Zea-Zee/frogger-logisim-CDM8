@@ -1,0 +1,3669 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="center"/>
+    </tool>
+    <tool name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val=" "/>
+    </tool>
+    <tool name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="16"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="x"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </tool>
+    <tool name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Clock">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x0"/>
+    </tool>
+    <tool name="Power">
+      <a name="facing" val="west"/>
+      <a name="width" val="9"/>
+    </tool>
+    <tool name="Bit Extender">
+      <a name="in_width" val="2"/>
+      <a name="out_width" val="5"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1">
+    <tool name="NOT Gate">
+      <a name="size" val="20"/>
+    </tool>
+    <tool name="Buffer">
+      <a name="out" val="Z1"/>
+    </tool>
+    <tool name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </tool>
+    <tool name="OR Gate">
+      <a name="width" val="8"/>
+    </tool>
+    <tool name="NOR Gate">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="XOR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </tool>
+    <tool name="Controlled Buffer">
+      <a name="width" val="5"/>
+    </tool>
+  </lib>
+  <lib desc="#Plexers" name="2">
+    <tool name="Multiplexer">
+      <a name="width" val="2"/>
+      <a name="disabled" val="0"/>
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Decoder">
+      <a name="select" val="3"/>
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Priority Encoder">
+      <a name="select" val="2"/>
+    </tool>
+  </lib>
+  <lib desc="#Arithmetic" name="3">
+    <tool name="Adder">
+      <a name="width" val="2"/>
+    </tool>
+    <tool name="Subtractor">
+      <a name="width" val="6"/>
+    </tool>
+    <tool name="Multiplier">
+      <a name="width" val="5"/>
+    </tool>
+    <tool name="Comparator">
+      <a name="width" val="5"/>
+      <a name="mode" val="unsigned"/>
+    </tool>
+    <tool name="Shifter">
+      <a name="width" val="6"/>
+    </tool>
+  </lib>
+  <lib desc="#Memory" name="4">
+    <tool name="Register">
+      <a name="width" val="32"/>
+    </tool>
+    <tool name="Counter">
+      <a name="width" val="1"/>
+      <a name="max" val="0x1"/>
+    </tool>
+    <tool name="Shift Register">
+      <a name="width" val="32"/>
+      <a name="length" val="5"/>
+    </tool>
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5">
+    <tool name="Button">
+      <a name="facing" val="north"/>
+      <a name="label" val="res"/>
+    </tool>
+    <tool name="Joystick">
+      <a name="bits" val="2"/>
+    </tool>
+    <tool name="Keyboard">
+      <a name="buflen" val="2"/>
+    </tool>
+    <tool name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#bdbdbd"/>
+    </tool>
+  </lib>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val="current level"/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <lib desc="file#drivers.circ" name="7"/>
+  <lib desc="file#keyboard.circ" name="8"/>
+  <lib desc="file#statistics.circ" name="9"/>
+  <lib desc="file#service.circ" name="10"/>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="error"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val="current level"/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(320,1030)" to="(380,1030)"/>
+    <wire from="(970,1610)" to="(970,1620)"/>
+    <wire from="(150,310)" to="(150,320)"/>
+    <wire from="(180,750)" to="(180,950)"/>
+    <wire from="(340,260)" to="(390,260)"/>
+    <wire from="(310,1420)" to="(310,1750)"/>
+    <wire from="(320,1430)" to="(320,1760)"/>
+    <wire from="(240,1360)" to="(240,1380)"/>
+    <wire from="(560,1610)" to="(600,1610)"/>
+    <wire from="(1840,560)" to="(1840,570)"/>
+    <wire from="(160,640)" to="(160,660)"/>
+    <wire from="(150,950)" to="(150,970)"/>
+    <wire from="(120,470)" to="(120,560)"/>
+    <wire from="(310,820)" to="(310,920)"/>
+    <wire from="(320,830)" to="(320,930)"/>
+    <wire from="(1320,430)" to="(1580,430)"/>
+    <wire from="(270,540)" to="(290,540)"/>
+    <wire from="(2150,550)" to="(2150,560)"/>
+    <wire from="(2150,390)" to="(2150,400)"/>
+    <wire from="(1930,1090)" to="(1940,1090)"/>
+    <wire from="(1020,1410)" to="(1280,1410)"/>
+    <wire from="(1020,930)" to="(1280,930)"/>
+    <wire from="(2440,40)" to="(2440,50)"/>
+    <wire from="(2470,550)" to="(2470,560)"/>
+    <wire from="(2460,700)" to="(2460,710)"/>
+    <wire from="(2470,390)" to="(2470,400)"/>
+    <wire from="(1020,610)" to="(1280,610)"/>
+    <wire from="(190,530)" to="(270,530)"/>
+    <wire from="(170,450)" to="(180,450)"/>
+    <wire from="(720,630)" to="(980,630)"/>
+    <wire from="(720,1110)" to="(980,1110)"/>
+    <wire from="(720,1430)" to="(980,1430)"/>
+    <wire from="(720,310)" to="(980,310)"/>
+    <wire from="(160,1210)" to="(300,1210)"/>
+    <wire from="(420,810)" to="(680,810)"/>
+    <wire from="(420,330)" to="(680,330)"/>
+    <wire from="(420,1130)" to="(680,1130)"/>
+    <wire from="(310,820)" to="(380,820)"/>
+    <wire from="(360,230)" to="(360,360)"/>
+    <wire from="(110,720)" to="(110,730)"/>
+    <wire from="(260,1750)" to="(310,1750)"/>
+    <wire from="(310,920)" to="(310,930)"/>
+    <wire from="(300,270)" to="(300,290)"/>
+    <wire from="(150,1240)" to="(150,1260)"/>
+    <wire from="(160,450)" to="(160,470)"/>
+    <wire from="(1870,560)" to="(1870,570)"/>
+    <wire from="(120,660)" to="(160,660)"/>
+    <wire from="(310,630)" to="(310,720)"/>
+    <wire from="(360,360)" to="(360,460)"/>
+    <wire from="(360,1160)" to="(360,1260)"/>
+    <wire from="(260,330)" to="(290,330)"/>
+    <wire from="(1320,560)" to="(1580,560)"/>
+    <wire from="(1320,720)" to="(1580,720)"/>
+    <wire from="(1320,400)" to="(1580,400)"/>
+    <wire from="(150,1000)" to="(300,1000)"/>
+    <wire from="(2310,40)" to="(2310,50)"/>
+    <wire from="(2150,520)" to="(2150,530)"/>
+    <wire from="(1020,900)" to="(1280,900)"/>
+    <wire from="(170,610)" to="(380,610)"/>
+    <wire from="(260,390)" to="(260,430)"/>
+    <wire from="(2490,700)" to="(2490,710)"/>
+    <wire from="(1020,1220)" to="(1280,1220)"/>
+    <wire from="(180,340)" to="(180,450)"/>
+    <wire from="(1020,1060)" to="(1280,1060)"/>
+    <wire from="(900,1610)" to="(930,1610)"/>
+    <wire from="(160,1040)" to="(180,1040)"/>
+    <wire from="(2470,520)" to="(2470,530)"/>
+    <wire from="(120,1370)" to="(120,1420)"/>
+    <wire from="(230,1760)" to="(240,1760)"/>
+    <wire from="(1060,1610)" to="(1090,1610)"/>
+    <wire from="(290,220)" to="(300,220)"/>
+    <wire from="(1020,420)" to="(1280,420)"/>
+    <wire from="(160,700)" to="(300,700)"/>
+    <wire from="(720,920)" to="(980,920)"/>
+    <wire from="(720,600)" to="(980,600)"/>
+    <wire from="(720,1400)" to="(980,1400)"/>
+    <wire from="(720,760)" to="(980,760)"/>
+    <wire from="(30,1720)" to="(40,1720)"/>
+    <wire from="(300,430)" to="(300,490)"/>
+    <wire from="(300,1230)" to="(300,1290)"/>
+    <wire from="(420,620)" to="(680,620)"/>
+    <wire from="(420,300)" to="(680,300)"/>
+    <wire from="(420,460)" to="(680,460)"/>
+    <wire from="(420,1260)" to="(680,1260)"/>
+    <wire from="(420,1420)" to="(680,1420)"/>
+    <wire from="(420,1100)" to="(680,1100)"/>
+    <wire from="(1020,250)" to="(1290,250)"/>
+    <wire from="(320,330)" to="(380,330)"/>
+    <wire from="(320,1130)" to="(380,1130)"/>
+    <wire from="(150,410)" to="(150,420)"/>
+    <wire from="(270,530)" to="(270,540)"/>
+    <wire from="(180,950)" to="(180,1040)"/>
+    <wire from="(120,470)" to="(160,470)"/>
+    <wire from="(320,930)" to="(320,1030)"/>
+    <wire from="(1050,1590)" to="(1060,1590)"/>
+    <wire from="(1080,1620)" to="(1090,1620)"/>
+    <wire from="(1320,530)" to="(1580,530)"/>
+    <wire from="(2150,490)" to="(2150,500)"/>
+    <wire from="(1020,1030)" to="(1280,1030)"/>
+    <wire from="(2520,700)" to="(2520,710)"/>
+    <wire from="(2470,490)" to="(2470,500)"/>
+    <wire from="(1070,1590)" to="(1100,1590)"/>
+    <wire from="(1020,710)" to="(1280,710)"/>
+    <wire from="(1020,390)" to="(1280,390)"/>
+    <wire from="(420,260)" to="(690,260)"/>
+    <wire from="(300,900)" to="(380,900)"/>
+    <wire from="(160,1310)" to="(300,1310)"/>
+    <wire from="(720,730)" to="(980,730)"/>
+    <wire from="(720,410)" to="(980,410)"/>
+    <wire from="(720,1210)" to="(980,1210)"/>
+    <wire from="(420,430)" to="(680,430)"/>
+    <wire from="(420,910)" to="(680,910)"/>
+    <wire from="(420,1230)" to="(680,1230)"/>
+    <wire from="(720,1580)" to="(730,1580)"/>
+    <wire from="(310,920)" to="(380,920)"/>
+    <wire from="(560,1580)" to="(570,1580)"/>
+    <wire from="(900,1610)" to="(900,1620)"/>
+    <wire from="(70,1740)" to="(70,1750)"/>
+    <wire from="(180,1770)" to="(230,1770)"/>
+    <wire from="(250,1760)" to="(250,1770)"/>
+    <wire from="(310,1020)" to="(310,1030)"/>
+    <wire from="(300,1330)" to="(300,1350)"/>
+    <wire from="(100,520)" to="(100,610)"/>
+    <wire from="(90,510)" to="(90,600)"/>
+    <wire from="(310,730)" to="(310,820)"/>
+    <wire from="(730,1600)" to="(730,1620)"/>
+    <wire from="(750,1570)" to="(770,1570)"/>
+    <wire from="(360,460)" to="(360,560)"/>
+    <wire from="(360,1260)" to="(360,1360)"/>
+    <wire from="(950,1610)" to="(970,1610)"/>
+    <wire from="(260,430)" to="(290,430)"/>
+    <wire from="(1070,1580)" to="(1080,1580)"/>
+    <wire from="(1320,500)" to="(1580,500)"/>
+    <wire from="(1320,660)" to="(1580,660)"/>
+    <wire from="(2150,460)" to="(2150,470)"/>
+    <wire from="(2550,700)" to="(2550,710)"/>
+    <wire from="(1020,1160)" to="(1280,1160)"/>
+    <wire from="(1020,1000)" to="(1280,1000)"/>
+    <wire from="(1020,1320)" to="(1280,1320)"/>
+    <wire from="(180,1240)" to="(180,1350)"/>
+    <wire from="(2470,460)" to="(2470,470)"/>
+    <wire from="(2460,1090)" to="(2460,1100)"/>
+    <wire from="(1020,520)" to="(1280,520)"/>
+    <wire from="(350,860)" to="(360,860)"/>
+    <wire from="(1020,360)" to="(1280,360)"/>
+    <wire from="(300,710)" to="(380,710)"/>
+    <wire from="(170,1800)" to="(180,1800)"/>
+    <wire from="(720,860)" to="(980,860)"/>
+    <wire from="(720,1020)" to="(980,1020)"/>
+    <wire from="(720,700)" to="(980,700)"/>
+    <wire from="(260,330)" to="(260,390)"/>
+    <wire from="(300,530)" to="(300,590)"/>
+    <wire from="(980,690)" to="(990,690)"/>
+    <wire from="(420,560)" to="(680,560)"/>
+    <wire from="(420,720)" to="(680,720)"/>
+    <wire from="(420,400)" to="(680,400)"/>
+    <wire from="(420,1200)" to="(680,1200)"/>
+    <wire from="(420,1360)" to="(680,1360)"/>
+    <wire from="(680,390)" to="(690,390)"/>
+    <wire from="(320,1230)" to="(380,1230)"/>
+    <wire from="(320,430)" to="(380,430)"/>
+    <wire from="(150,510)" to="(150,520)"/>
+    <wire from="(1900,460)" to="(2140,460)"/>
+    <wire from="(290,330)" to="(290,340)"/>
+    <wire from="(360,1360)" to="(360,1380)"/>
+    <wire from="(150,1150)" to="(150,1170)"/>
+    <wire from="(260,1740)" to="(360,1740)"/>
+    <wire from="(1100,1620)" to="(1100,1630)"/>
+    <wire from="(100,620)" to="(100,650)"/>
+    <wire from="(120,1060)" to="(150,1060)"/>
+    <wire from="(320,1030)" to="(320,1130)"/>
+    <wire from="(1320,630)" to="(1580,630)"/>
+    <wire from="(1320,310)" to="(1580,310)"/>
+    <wire from="(270,740)" to="(290,740)"/>
+    <wire from="(90,610)" to="(90,650)"/>
+    <wire from="(2150,430)" to="(2150,440)"/>
+    <wire from="(470,1580)" to="(490,1580)"/>
+    <wire from="(2490,1090)" to="(2490,1100)"/>
+    <wire from="(1020,1130)" to="(1280,1130)"/>
+    <wire from="(160,950)" to="(180,950)"/>
+    <wire from="(2470,430)" to="(2470,440)"/>
+    <wire from="(1020,330)" to="(1280,330)"/>
+    <wire from="(80,600)" to="(80,650)"/>
+    <wire from="(1020,810)" to="(1280,810)"/>
+    <wire from="(300,1420)" to="(310,1420)"/>
+    <wire from="(190,730)" to="(270,730)"/>
+    <wire from="(30,1670)" to="(30,1720)"/>
+    <wire from="(300,1000)" to="(380,1000)"/>
+    <wire from="(720,1310)" to="(980,1310)"/>
+    <wire from="(720,830)" to="(980,830)"/>
+    <wire from="(720,510)" to="(980,510)"/>
+    <wire from="(420,690)" to="(680,690)"/>
+    <wire from="(420,1010)" to="(680,1010)"/>
+    <wire from="(420,530)" to="(680,530)"/>
+    <wire from="(420,1330)" to="(680,1330)"/>
+    <wire from="(170,310)" to="(300,310)"/>
+    <wire from="(310,1020)" to="(380,1020)"/>
+    <wire from="(1100,1590)" to="(1100,1610)"/>
+    <wire from="(950,1600)" to="(950,1610)"/>
+    <wire from="(310,320)" to="(310,330)"/>
+    <wire from="(310,1120)" to="(310,1130)"/>
+    <wire from="(250,1700)" to="(250,1720)"/>
+    <wire from="(80,1560)" to="(80,1640)"/>
+    <wire from="(100,520)" to="(140,520)"/>
+    <wire from="(80,1530)" to="(80,1560)"/>
+    <wire from="(30,1640)" to="(30,1670)"/>
+    <wire from="(360,560)" to="(360,660)"/>
+    <wire from="(180,540)" to="(180,640)"/>
+    <wire from="(1320,760)" to="(1580,760)"/>
+    <wire from="(1320,600)" to="(1580,600)"/>
+    <wire from="(150,1200)" to="(300,1200)"/>
+    <wire from="(2150,560)" to="(2150,570)"/>
+    <wire from="(1870,560)" to="(1880,560)"/>
+    <wire from="(2150,400)" to="(2150,410)"/>
+    <wire from="(1020,1100)" to="(1280,1100)"/>
+    <wire from="(1020,1420)" to="(1280,1420)"/>
+    <wire from="(2520,1090)" to="(2520,1100)"/>
+    <wire from="(1020,1260)" to="(1280,1260)"/>
+    <wire from="(160,1240)" to="(180,1240)"/>
+    <wire from="(2470,560)" to="(2470,570)"/>
+    <wire from="(2470,400)" to="(2470,410)"/>
+    <wire from="(1020,460)" to="(1280,460)"/>
+    <wire from="(1020,300)" to="(1280,300)"/>
+    <wire from="(1020,620)" to="(1280,620)"/>
+    <wire from="(720,1120)" to="(980,1120)"/>
+    <wire from="(720,800)" to="(980,800)"/>
+    <wire from="(720,960)" to="(980,960)"/>
+    <wire from="(720,320)" to="(980,320)"/>
+    <wire from="(300,630)" to="(300,690)"/>
+    <wire from="(420,820)" to="(680,820)"/>
+    <wire from="(420,500)" to="(680,500)"/>
+    <wire from="(420,660)" to="(680,660)"/>
+    <wire from="(420,1460)" to="(680,1460)"/>
+    <wire from="(420,1300)" to="(680,1300)"/>
+    <wire from="(320,530)" to="(380,530)"/>
+    <wire from="(320,1330)" to="(380,1330)"/>
+    <wire from="(180,1350)" to="(240,1350)"/>
+    <wire from="(170,310)" to="(170,320)"/>
+    <wire from="(150,610)" to="(150,620)"/>
+    <wire from="(330,390)" to="(380,390)"/>
+    <wire from="(470,1570)" to="(470,1580)"/>
+    <wire from="(290,430)" to="(290,440)"/>
+    <wire from="(270,730)" to="(270,740)"/>
+    <wire from="(560,1590)" to="(600,1590)"/>
+    <wire from="(90,710)" to="(90,730)"/>
+    <wire from="(160,300)" to="(160,320)"/>
+    <wire from="(190,1450)" to="(190,1470)"/>
+    <wire from="(180,1150)" to="(180,1240)"/>
+    <wire from="(160,560)" to="(190,560)"/>
+    <wire from="(320,330)" to="(320,430)"/>
+    <wire from="(320,1130)" to="(320,1230)"/>
+    <wire from="(150,1100)" to="(240,1100)"/>
+    <wire from="(1320,250)" to="(1580,250)"/>
+    <wire from="(1320,730)" to="(1580,730)"/>
+    <wire from="(1320,410)" to="(1580,410)"/>
+    <wire from="(2150,530)" to="(2150,540)"/>
+    <wire from="(1020,910)" to="(1280,910)"/>
+    <wire from="(1020,1230)" to="(1280,1230)"/>
+    <wire from="(2550,1090)" to="(2550,1100)"/>
+    <wire from="(2470,370)" to="(2470,380)"/>
+    <wire from="(2470,530)" to="(2470,540)"/>
+    <wire from="(1020,430)" to="(1280,430)"/>
+    <wire from="(170,750)" to="(180,750)"/>
+    <wire from="(300,300)" to="(380,300)"/>
+    <wire from="(130,1510)" to="(140,1510)"/>
+    <wire from="(300,1100)" to="(380,1100)"/>
+    <wire from="(720,610)" to="(980,610)"/>
+    <wire from="(720,930)" to="(980,930)"/>
+    <wire from="(720,1410)" to="(980,1410)"/>
+    <wire from="(90,510)" to="(100,510)"/>
+    <wire from="(980,760)" to="(990,760)"/>
+    <wire from="(420,630)" to="(680,630)"/>
+    <wire from="(420,310)" to="(680,310)"/>
+    <wire from="(420,1110)" to="(680,1110)"/>
+    <wire from="(420,1430)" to="(680,1430)"/>
+    <wire from="(80,1530)" to="(150,1530)"/>
+    <wire from="(1020,260)" to="(1290,260)"/>
+    <wire from="(720,1620)" to="(730,1620)"/>
+    <wire from="(310,320)" to="(380,320)"/>
+    <wire from="(310,1120)" to="(380,1120)"/>
+    <wire from="(2560,710)" to="(2600,710)"/>
+    <wire from="(760,1590)" to="(810,1590)"/>
+    <wire from="(160,910)" to="(160,920)"/>
+    <wire from="(460,1610)" to="(510,1610)"/>
+    <wire from="(310,420)" to="(310,430)"/>
+    <wire from="(310,1220)" to="(310,1230)"/>
+    <wire from="(2550,700)" to="(2560,700)"/>
+    <wire from="(1780,1090)" to="(1780,1100)"/>
+    <wire from="(160,750)" to="(160,770)"/>
+    <wire from="(150,900)" to="(150,920)"/>
+    <wire from="(200,1430)" to="(200,1450)"/>
+    <wire from="(100,620)" to="(140,620)"/>
+    <wire from="(310,930)" to="(310,1020)"/>
+    <wire from="(120,970)" to="(150,970)"/>
+    <wire from="(360,660)" to="(360,760)"/>
+    <wire from="(110,320)" to="(140,320)"/>
+    <wire from="(1690,470)" to="(2140,470)"/>
+    <wire from="(1280,390)" to="(1290,390)"/>
+    <wire from="(1320,700)" to="(1580,700)"/>
+    <wire from="(150,1300)" to="(300,1300)"/>
+    <wire from="(220,1720)" to="(240,1720)"/>
+    <wire from="(2150,500)" to="(2150,510)"/>
+    <wire from="(1020,1360)" to="(1280,1360)"/>
+    <wire from="(120,1060)" to="(120,1170)"/>
+    <wire from="(1020,1200)" to="(1280,1200)"/>
+    <wire from="(180,640)" to="(180,750)"/>
+    <wire from="(2580,1090)" to="(2580,1100)"/>
+    <wire from="(2470,500)" to="(2470,510)"/>
+    <wire from="(1020,720)" to="(1280,720)"/>
+    <wire from="(1020,400)" to="(1280,400)"/>
+    <wire from="(1020,560)" to="(1280,560)"/>
+    <wire from="(330,240)" to="(340,240)"/>
+    <wire from="(160,1510)" to="(170,1510)"/>
+    <wire from="(300,910)" to="(380,910)"/>
+    <wire from="(720,1060)" to="(980,1060)"/>
+    <wire from="(720,420)" to="(980,420)"/>
+    <wire from="(720,900)" to="(980,900)"/>
+    <wire from="(720,1220)" to="(980,1220)"/>
+    <wire from="(720,250)" to="(990,250)"/>
+    <wire from="(420,760)" to="(680,760)"/>
+    <wire from="(420,600)" to="(680,600)"/>
+    <wire from="(420,920)" to="(680,920)"/>
+    <wire from="(420,1400)" to="(680,1400)"/>
+    <wire from="(240,1350)" to="(300,1350)"/>
+    <wire from="(320,1430)" to="(380,1430)"/>
+    <wire from="(320,630)" to="(380,630)"/>
+    <wire from="(150,710)" to="(150,720)"/>
+    <wire from="(170,410)" to="(170,420)"/>
+    <wire from="(120,770)" to="(120,970)"/>
+    <wire from="(1810,1090)" to="(1810,1100)"/>
+    <wire from="(120,390)" to="(120,470)"/>
+    <wire from="(160,400)" to="(160,420)"/>
+    <wire from="(150,1350)" to="(150,1370)"/>
+    <wire from="(150,1510)" to="(150,1530)"/>
+    <wire from="(180,450)" to="(180,540)"/>
+    <wire from="(120,770)" to="(160,770)"/>
+    <wire from="(120,360)" to="(120,390)"/>
+    <wire from="(120,1260)" to="(150,1260)"/>
+    <wire from="(150,1450)" to="(180,1450)"/>
+    <wire from="(320,1230)" to="(320,1330)"/>
+    <wire from="(320,430)" to="(320,530)"/>
+    <wire from="(2610,1090)" to="(2610,1100)"/>
+    <wire from="(1320,510)" to="(1580,510)"/>
+    <wire from="(2150,470)" to="(2150,480)"/>
+    <wire from="(1020,1010)" to="(1280,1010)"/>
+    <wire from="(1020,1330)" to="(1280,1330)"/>
+    <wire from="(160,1150)" to="(180,1150)"/>
+    <wire from="(80,1710)" to="(100,1710)"/>
+    <wire from="(2470,470)" to="(2470,480)"/>
+    <wire from="(1020,530)" to="(1280,530)"/>
+    <wire from="(1020,690)" to="(1280,690)"/>
+    <wire from="(300,400)" to="(380,400)"/>
+    <wire from="(300,1200)" to="(380,1200)"/>
+    <wire from="(2600,630)" to="(2600,710)"/>
+    <wire from="(720,710)" to="(980,710)"/>
+    <wire from="(720,390)" to="(980,390)"/>
+    <wire from="(720,1030)" to="(980,1030)"/>
+    <wire from="(80,600)" to="(90,600)"/>
+    <wire from="(90,610)" to="(100,610)"/>
+    <wire from="(420,730)" to="(680,730)"/>
+    <wire from="(420,410)" to="(680,410)"/>
+    <wire from="(760,1600)" to="(770,1600)"/>
+    <wire from="(420,1210)" to="(680,1210)"/>
+    <wire from="(170,510)" to="(300,510)"/>
+    <wire from="(310,420)" to="(380,420)"/>
+    <wire from="(310,1220)" to="(380,1220)"/>
+    <wire from="(300,1380)" to="(360,1380)"/>
+    <wire from="(730,1580)" to="(730,1590)"/>
+    <wire from="(160,1010)" to="(160,1020)"/>
+    <wire from="(310,520)" to="(310,530)"/>
+    <wire from="(240,1090)" to="(240,1100)"/>
+    <wire from="(360,1460)" to="(360,1660)"/>
+    <wire from="(310,1320)" to="(310,1330)"/>
+    <wire from="(1690,460)" to="(1690,470)"/>
+    <wire from="(150,1000)" to="(150,1020)"/>
+    <wire from="(1840,1090)" to="(1840,1100)"/>
+    <wire from="(750,1600)" to="(750,1620)"/>
+    <wire from="(320,240)" to="(320,330)"/>
+    <wire from="(310,1030)" to="(310,1120)"/>
+    <wire from="(120,330)" to="(120,360)"/>
+    <wire from="(360,760)" to="(360,860)"/>
+    <wire from="(110,420)" to="(140,420)"/>
+    <wire from="(300,730)" to="(300,890)"/>
+    <wire from="(1320,320)" to="(1580,320)"/>
+    <wire from="(2150,440)" to="(2150,450)"/>
+    <wire from="(1020,1300)" to="(1280,1300)"/>
+    <wire from="(1020,1460)" to="(1280,1460)"/>
+    <wire from="(2470,440)" to="(2470,450)"/>
+    <wire from="(1020,660)" to="(1280,660)"/>
+    <wire from="(1020,820)" to="(1280,820)"/>
+    <wire from="(1020,500)" to="(1280,500)"/>
+    <wire from="(170,340)" to="(180,340)"/>
+    <wire from="(300,1010)" to="(380,1010)"/>
+    <wire from="(170,1780)" to="(180,1780)"/>
+    <wire from="(160,300)" to="(300,300)"/>
+    <wire from="(720,1320)" to="(980,1320)"/>
+    <wire from="(720,1000)" to="(980,1000)"/>
+    <wire from="(720,360)" to="(980,360)"/>
+    <wire from="(720,1160)" to="(980,1160)"/>
+    <wire from="(720,520)" to="(980,520)"/>
+    <wire from="(420,700)" to="(680,700)"/>
+    <wire from="(420,1020)" to="(680,1020)"/>
+    <wire from="(420,860)" to="(680,860)"/>
+    <wire from="(320,730)" to="(380,730)"/>
+    <wire from="(320,1330)" to="(320,1400)"/>
+    <wire from="(170,510)" to="(170,520)"/>
+    <wire from="(180,1800)" to="(180,1810)"/>
+    <wire from="(740,1560)" to="(740,1590)"/>
+    <wire from="(160,500)" to="(160,520)"/>
+    <wire from="(160,340)" to="(160,360)"/>
+    <wire from="(1870,1090)" to="(1870,1100)"/>
+    <wire from="(120,970)" to="(120,1060)"/>
+    <wire from="(750,1570)" to="(750,1590)"/>
+    <wire from="(110,320)" to="(110,410)"/>
+    <wire from="(190,530)" to="(190,560)"/>
+    <wire from="(320,530)" to="(320,630)"/>
+    <wire from="(490,1580)" to="(510,1580)"/>
+    <wire from="(270,230)" to="(300,230)"/>
+    <wire from="(940,1600)" to="(940,1640)"/>
+    <wire from="(260,390)" to="(280,390)"/>
+    <wire from="(1320,610)" to="(1580,610)"/>
+    <wire from="(2150,410)" to="(2150,420)"/>
+    <wire from="(1020,1110)" to="(1280,1110)"/>
+    <wire from="(1020,1430)" to="(1280,1430)"/>
+    <wire from="(220,1680)" to="(220,1720)"/>
+    <wire from="(180,1430)" to="(200,1430)"/>
+    <wire from="(2470,410)" to="(2470,420)"/>
+    <wire from="(150,1450)" to="(150,1500)"/>
+    <wire from="(1020,630)" to="(1280,630)"/>
+    <wire from="(1020,310)" to="(1280,310)"/>
+    <wire from="(300,500)" to="(380,500)"/>
+    <wire from="(100,1680)" to="(110,1680)"/>
+    <wire from="(200,1460)" to="(210,1460)"/>
+    <wire from="(300,1300)" to="(380,1300)"/>
+    <wire from="(120,390)" to="(260,390)"/>
+    <wire from="(160,910)" to="(300,910)"/>
+    <wire from="(720,1130)" to="(980,1130)"/>
+    <wire from="(720,810)" to="(980,810)"/>
+    <wire from="(720,330)" to="(980,330)"/>
+    <wire from="(420,830)" to="(680,830)"/>
+    <wire from="(420,510)" to="(680,510)"/>
+    <wire from="(420,1310)" to="(680,1310)"/>
+    <wire from="(310,520)" to="(380,520)"/>
+    <wire from="(500,1600)" to="(510,1600)"/>
+    <wire from="(310,1320)" to="(380,1320)"/>
+    <wire from="(240,1100)" to="(300,1100)"/>
+    <wire from="(260,1760)" to="(320,1760)"/>
+    <wire from="(160,1110)" to="(160,1120)"/>
+    <wire from="(180,1770)" to="(180,1780)"/>
+    <wire from="(240,1350)" to="(240,1360)"/>
+    <wire from="(310,620)" to="(310,630)"/>
+    <wire from="(2600,630)" to="(2610,630)"/>
+    <wire from="(150,1100)" to="(150,1120)"/>
+    <wire from="(360,1660)" to="(360,1740)"/>
+    <wire from="(1900,1090)" to="(1900,1100)"/>
+    <wire from="(120,360)" to="(160,360)"/>
+    <wire from="(150,1420)" to="(150,1450)"/>
+    <wire from="(310,330)" to="(310,420)"/>
+    <wire from="(160,1110)" to="(260,1110)"/>
+    <wire from="(310,1130)" to="(310,1220)"/>
+    <wire from="(120,1170)" to="(150,1170)"/>
+    <wire from="(360,860)" to="(360,960)"/>
+    <wire from="(1320,260)" to="(1580,260)"/>
+    <wire from="(270,530)" to="(290,530)"/>
+    <wire from="(1320,420)" to="(1580,420)"/>
+    <wire from="(2150,380)" to="(2150,390)"/>
+    <wire from="(2150,540)" to="(2150,550)"/>
+    <wire from="(1020,920)" to="(1280,920)"/>
+    <wire from="(120,1260)" to="(120,1370)"/>
+    <wire from="(1020,1400)" to="(1280,1400)"/>
+    <wire from="(2470,380)" to="(2470,390)"/>
+    <wire from="(2470,540)" to="(2470,550)"/>
+    <wire from="(90,1680)" to="(90,1730)"/>
+    <wire from="(1020,600)" to="(1280,600)"/>
+    <wire from="(1020,760)" to="(1280,760)"/>
+    <wire from="(300,310)" to="(380,310)"/>
+    <wire from="(200,1430)" to="(210,1430)"/>
+    <wire from="(300,1110)" to="(380,1110)"/>
+    <wire from="(160,400)" to="(300,400)"/>
+    <wire from="(720,300)" to="(980,300)"/>
+    <wire from="(720,620)" to="(980,620)"/>
+    <wire from="(720,1260)" to="(980,1260)"/>
+    <wire from="(720,1420)" to="(980,1420)"/>
+    <wire from="(720,1100)" to="(980,1100)"/>
+    <wire from="(720,460)" to="(980,460)"/>
+    <wire from="(300,930)" to="(300,990)"/>
+    <wire from="(420,320)" to="(680,320)"/>
+    <wire from="(420,960)" to="(680,960)"/>
+    <wire from="(420,800)" to="(680,800)"/>
+    <wire from="(420,1120)" to="(680,1120)"/>
+    <wire from="(320,830)" to="(380,830)"/>
+    <wire from="(490,1570)" to="(490,1580)"/>
+    <wire from="(530,1610)" to="(530,1620)"/>
+    <wire from="(170,610)" to="(170,620)"/>
+    <wire from="(30,1670)" to="(80,1670)"/>
+    <wire from="(1720,560)" to="(1720,570)"/>
+    <wire from="(160,600)" to="(160,620)"/>
+    <wire from="(1930,1090)" to="(1930,1100)"/>
+    <wire from="(320,1400)" to="(320,1430)"/>
+    <wire from="(260,1110)" to="(300,1110)"/>
+    <wire from="(2610,1090)" to="(2620,1090)"/>
+    <wire from="(750,1620)" to="(770,1620)"/>
+    <wire from="(320,630)" to="(320,730)"/>
+    <wire from="(100,410)" to="(100,510)"/>
+    <wire from="(1320,710)" to="(1580,710)"/>
+    <wire from="(2150,510)" to="(2150,520)"/>
+    <wire from="(270,230)" to="(270,270)"/>
+    <wire from="(1020,1210)" to="(1280,1210)"/>
+    <wire from="(2470,510)" to="(2470,520)"/>
+    <wire from="(160,1350)" to="(180,1350)"/>
+    <wire from="(1020,730)" to="(1280,730)"/>
+    <wire from="(1020,410)" to="(1280,410)"/>
+    <wire from="(300,600)" to="(380,600)"/>
+    <wire from="(160,1010)" to="(300,1010)"/>
+    <wire from="(720,430)" to="(980,430)"/>
+    <wire from="(720,910)" to="(980,910)"/>
+    <wire from="(720,1230)" to="(980,1230)"/>
+    <wire from="(720,260)" to="(990,260)"/>
+    <wire from="(420,610)" to="(680,610)"/>
+    <wire from="(420,930)" to="(680,930)"/>
+    <wire from="(420,1410)" to="(680,1410)"/>
+    <wire from="(170,710)" to="(300,710)"/>
+    <wire from="(310,1420)" to="(380,1420)"/>
+    <wire from="(310,620)" to="(380,620)"/>
+    <wire from="(560,1600)" to="(570,1600)"/>
+    <wire from="(160,1210)" to="(160,1220)"/>
+    <wire from="(460,1590)" to="(510,1590)"/>
+    <wire from="(230,1760)" to="(230,1770)"/>
+    <wire from="(310,720)" to="(310,730)"/>
+    <wire from="(30,1640)" to="(80,1640)"/>
+    <wire from="(1750,560)" to="(1750,570)"/>
+    <wire from="(150,1200)" to="(150,1220)"/>
+    <wire from="(150,1040)" to="(150,1060)"/>
+    <wire from="(310,430)" to="(310,520)"/>
+    <wire from="(310,1230)" to="(310,1320)"/>
+    <wire from="(360,960)" to="(360,1060)"/>
+    <wire from="(120,560)" to="(120,660)"/>
+    <wire from="(1320,520)" to="(1580,520)"/>
+    <wire from="(1320,360)" to="(1580,360)"/>
+    <wire from="(2350,40)" to="(2350,50)"/>
+    <wire from="(2150,480)" to="(2150,490)"/>
+    <wire from="(170,410)" to="(380,410)"/>
+    <wire from="(1020,1020)" to="(1280,1020)"/>
+    <wire from="(130,1450)" to="(150,1450)"/>
+    <wire from="(2470,480)" to="(2470,490)"/>
+    <wire from="(1020,860)" to="(1280,860)"/>
+    <wire from="(1020,700)" to="(1280,700)"/>
+    <wire from="(420,250)" to="(690,250)"/>
+    <wire from="(170,540)" to="(180,540)"/>
+    <wire from="(80,1730)" to="(90,1730)"/>
+    <wire from="(300,1210)" to="(380,1210)"/>
+    <wire from="(160,500)" to="(300,500)"/>
+    <wire from="(720,560)" to="(980,560)"/>
+    <wire from="(720,1200)" to="(980,1200)"/>
+    <wire from="(70,1560)" to="(80,1560)"/>
+    <wire from="(720,1360)" to="(980,1360)"/>
+    <wire from="(720,720)" to="(980,720)"/>
+    <wire from="(720,400)" to="(980,400)"/>
+    <wire from="(300,1030)" to="(300,1090)"/>
+    <wire from="(420,900)" to="(680,900)"/>
+    <wire from="(420,420)" to="(680,420)"/>
+    <wire from="(420,1060)" to="(680,1060)"/>
+    <wire from="(420,1220)" to="(680,1220)"/>
+    <wire from="(320,930)" to="(380,930)"/>
+    <wire from="(170,710)" to="(170,720)"/>
+    <wire from="(340,240)" to="(340,260)"/>
+    <wire from="(1780,560)" to="(1780,570)"/>
+    <wire from="(310,240)" to="(310,320)"/>
+    <wire from="(740,1600)" to="(740,1630)"/>
+    <wire from="(160,700)" to="(160,720)"/>
+    <wire from="(160,540)" to="(160,560)"/>
+    <wire from="(120,1170)" to="(120,1260)"/>
+    <wire from="(320,730)" to="(320,830)"/>
+    <wire from="(270,270)" to="(300,270)"/>
+    <wire from="(1320,330)" to="(1580,330)"/>
+    <wire from="(2150,450)" to="(2150,460)"/>
+    <wire from="(190,730)" to="(190,770)"/>
+    <wire from="(1020,1310)" to="(1280,1310)"/>
+    <wire from="(140,1430)" to="(160,1430)"/>
+    <wire from="(2400,700)" to="(2400,710)"/>
+    <wire from="(2470,450)" to="(2470,460)"/>
+    <wire from="(260,1720)" to="(270,1720)"/>
+    <wire from="(1020,830)" to="(1280,830)"/>
+    <wire from="(1020,510)" to="(1280,510)"/>
+    <wire from="(120,1420)" to="(130,1420)"/>
+    <wire from="(300,700)" to="(380,700)"/>
+    <wire from="(170,1790)" to="(180,1790)"/>
+    <wire from="(720,690)" to="(980,690)"/>
+    <wire from="(720,1330)" to="(980,1330)"/>
+    <wire from="(720,1010)" to="(980,1010)"/>
+    <wire from="(720,530)" to="(980,530)"/>
+    <wire from="(420,710)" to="(680,710)"/>
+    <wire from="(420,390)" to="(680,390)"/>
+    <wire from="(420,1030)" to="(680,1030)"/>
+    <wire from="(310,720)" to="(380,720)"/>
+    <wire from="(930,1600)" to="(930,1610)"/>
+    <wire from="(190,1730)" to="(250,1730)"/>
+    <wire from="(160,1310)" to="(160,1320)"/>
+    <wire from="(260,1090)" to="(260,1110)"/>
+    <wire from="(1810,560)" to="(1810,570)"/>
+    <wire from="(150,1300)" to="(150,1320)"/>
+    <wire from="(360,1380)" to="(360,1460)"/>
+    <wire from="(120,560)" to="(160,560)"/>
+    <wire from="(1060,1570)" to="(1060,1580)"/>
+    <wire from="(310,530)" to="(310,620)"/>
+    <wire from="(310,1330)" to="(310,1420)"/>
+    <wire from="(110,720)" to="(140,720)"/>
+    <wire from="(120,1370)" to="(150,1370)"/>
+    <wire from="(160,770)" to="(190,770)"/>
+    <wire from="(360,1060)" to="(360,1160)"/>
+    <wire from="(110,420)" to="(110,710)"/>
+    <wire from="(1320,460)" to="(1580,460)"/>
+    <wire from="(270,730)" to="(290,730)"/>
+    <wire from="(1320,620)" to="(1580,620)"/>
+    <wire from="(1320,300)" to="(1580,300)"/>
+    <wire from="(150,900)" to="(300,900)"/>
+    <wire from="(300,1400)" to="(320,1400)"/>
+    <wire from="(2150,420)" to="(2150,430)"/>
+    <wire from="(1020,1120)" to="(1280,1120)"/>
+    <wire from="(120,660)" to="(120,770)"/>
+    <wire from="(1020,960)" to="(1280,960)"/>
+    <wire from="(180,1040)" to="(180,1150)"/>
+    <wire from="(90,710)" to="(110,710)"/>
+    <wire from="(2430,700)" to="(2430,710)"/>
+    <wire from="(2470,420)" to="(2470,430)"/>
+    <wire from="(460,1570)" to="(470,1570)"/>
+    <wire from="(1020,800)" to="(1280,800)"/>
+    <wire from="(1020,320)" to="(1280,320)"/>
+    <wire from="(170,640)" to="(180,640)"/>
+    <wire from="(300,510)" to="(380,510)"/>
+    <wire from="(120,1710)" to="(130,1710)"/>
+    <wire from="(300,1310)" to="(380,1310)"/>
+    <wire from="(160,600)" to="(300,600)"/>
+    <wire from="(720,820)" to="(980,820)"/>
+    <wire from="(720,1460)" to="(980,1460)"/>
+    <wire from="(720,500)" to="(980,500)"/>
+    <wire from="(720,1300)" to="(980,1300)"/>
+    <wire from="(720,660)" to="(980,660)"/>
+    <wire from="(100,410)" to="(110,410)"/>
+    <wire from="(300,330)" to="(300,390)"/>
+    <wire from="(300,1130)" to="(300,1190)"/>
+    <wire from="(420,520)" to="(680,520)"/>
+    <wire from="(420,360)" to="(680,360)"/>
+    <wire from="(420,1000)" to="(680,1000)"/>
+    <wire from="(420,1160)" to="(680,1160)"/>
+    <wire from="(420,1320)" to="(680,1320)"/>
+    <comp lib="0" loc="(1940,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="restartGame"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1300,450)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(1300,1250)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#572a00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(400,1290)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ffbe00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(400,990)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ffffff"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1880,1430)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="20"/>
+      <a name="matrixrows" val="30"/>
+      <a name="color" val="#ff0100"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="7" loc="(400,270)" name="log_2x1"/>
+    <comp lib="5" loc="(400,570)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(1990,590)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="20"/>
+      <a name="matrixrows" val="30"/>
+      <a name="color" val="#ff0100"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="0" loc="(300,320)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="11"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(700,300)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(500,1600)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="3"/>
+      <a name="label" val="vector"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(410,270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(700,1250)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#572a00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="9" loc="(1690,160)" name="digits"/>
+    <comp lib="5" loc="(1010,370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(2490,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="label" val="I/Oadr"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(400,970)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#121211"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(710,470)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(370,360)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="value" val="0xb"/>
+    </comp>
+    <comp lib="10" loc="(170,520)" name="rightShifter"/>
+    <comp lib="0" loc="(770,1570)" name="Tunnel">
+      <a name="label" val="good jump"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1010,1270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(370,1360)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="5" loc="(2330,720)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="27"/>
+      <a name="matrixrows" val="23"/>
+      <a name="color" val="#32bd7a"/>
+      <a name="offcolor" val="#83ff00"/>
+    </comp>
+    <comp lib="0" loc="(170,1510)" name="Tunnel">
+      <a name="label" val="restartGame"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(400,870)" name="truckDriver"/>
+    <comp lib="5" loc="(1000,150)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="12"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="7" loc="(400,770)" name="swampDriver"/>
+    <comp lib="0" loc="(140,1320)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="9" loc="(1990,590)" name="digits"/>
+    <comp lib="5" loc="(1300,600)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="9" loc="(2620,640)" name="digits"/>
+    <comp lib="5" loc="(1310,670)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="7" loc="(1000,270)" name="log_2x1"/>
+    <comp lib="9" loc="(2150,60)" name="timer"/>
+    <comp lib="5" loc="(2160,380)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="32"/>
+      <a name="matrixrows" val="20"/>
+      <a name="color" val="#ff0000"/>
+      <a name="offcolor" val="#bdbdbd00"/>
+    </comp>
+    <comp lib="0" loc="(390,250)" name="Constant">
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(2560,700)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="restartGame"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(2010,910)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="15"/>
+      <a name="matrixrows" val="15"/>
+      <a name="color" val="#ff2012"/>
+      <a name="offcolor" val="#bd2a5d"/>
+    </comp>
+    <comp lib="0" loc="(300,240)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="restartGame"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1900,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1000,1350)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(120,1420)" name="Pull Resistor">
+      <a name="facing" val="east"/>
+    </comp>
+    <comp lib="0" loc="(360,1660)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="4"/>
+      <a name="label" val="Y"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="9" loc="(2090,1430)" name="digits"/>
+    <comp lib="5" loc="(700,1090)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff005f"/>
+      <a name="offcolor" val="#b0b0b0"/>
+    </comp>
+    <comp lib="10" loc="(380,1060)" name="heightFlag"/>
+    <comp lib="0" loc="(370,760)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="9" loc="(740,1600)" name="set interrupts"/>
+    <comp lib="5" loc="(1310,770)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(710,270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(140,1150)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="3"/>
+      <a name="value" val="0x2"/>
+    </comp>
+    <comp lib="5" loc="(700,870)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="9" loc="(1100,1610)" name="good jump"/>
+    <comp lib="10" loc="(380,1160)" name="heightFlag"/>
+    <comp lib="5" loc="(400,690)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff5c00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(1010,1370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(100,760)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="3"/>
+      <a name="label" val="lKB"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1300,1400)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="0" loc="(160,1360)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="1"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(400,1270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1010,1170)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="7" loc="(700,270)" name="log_2x1"/>
+    <comp lib="0" loc="(250,1770)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="res"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(300,1410)" name="Probe">
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(150,310)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="5" loc="(1300,870)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(210,1430)" name="Tunnel">
+      <a name="label" val="stop"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(2470,380)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="32"/>
+      <a name="matrixrows" val="20"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#bdbdbd00"/>
+    </comp>
+    <comp lib="5" loc="(190,1730)" name="Button">
+      <a name="label" val="stop"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(700,970)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#121211"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1310,270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="7" loc="(1000,570)" name="log_1x1"/>
+    <comp lib="0" loc="(130,1710)" name="Tunnel">
+      <a name="label" val="restartGame"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(700,1070)" name="bolidDriver"/>
+    <comp lib="5" loc="(2560,1430)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="20"/>
+      <a name="matrixrows" val="30"/>
+      <a name="color" val="#ff0100"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="0" loc="(570,1600)" name="Tunnel">
+      <a name="label" val="I/Osel"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(190,1470)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="event"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(1300,370)" name="turtle_2x1"/>
+    <comp lib="5" loc="(1000,1270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1000,990)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ffffff"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(700,1370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="5" loc="(2480,380)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="32"/>
+      <a name="matrixrows" val="20"/>
+      <a name="color" val="#ff0000"/>
+      <a name="offcolor" val="#bdbdbd00"/>
+    </comp>
+    <comp lib="5" loc="(400,890)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ffbe00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="7" loc="(1000,370)" name="turtle_2x1"/>
+    <comp lib="7" loc="(700,1370)" name="swampDriver"/>
+    <comp lib="5" loc="(700,1440)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="7" loc="(700,670)" name="turtle_3x1"/>
+    <comp lib="0" loc="(150,510)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(170,760)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="7"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="10" loc="(300,1330)" name="computeIntresection"/>
+    <comp lib="5" loc="(710,770)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(400,150)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="12"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="7" loc="(400,1270)" name="truckDriver"/>
+    <comp lib="5" loc="(1010,1070)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(700,1050)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#121211"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(300,1120)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="3"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="10" loc="(380,460)" name="heightFlag"/>
+    <comp lib="1" loc="(940,1570)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="0" loc="(460,1610)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IAck"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(410,970)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(170,230)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="resPlOk"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(300,420)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="10"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(160,1160)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="3"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(300,1020)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="4"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(410,1070)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(530,1620)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(400,640)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(150,540)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="5" loc="(1310,1170)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(290,690)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0x1e"/>
+    </comp>
+    <comp lib="0" loc="(1880,560)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="restartGame"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1870,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+      <a name="label" val="I/Odat"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(700,1400)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="5" loc="(1300,1090)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff005f"/>
+      <a name="offcolor" val="#b0b0b0"/>
+    </comp>
+    <comp lib="0" loc="(740,1630)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1300,970)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#121211"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1000,840)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="10" loc="(380,860)" name="heightFlag"/>
+    <comp lib="10" loc="(380,1260)" name="heightFlag"/>
+    <comp lib="1" loc="(100,760)" name="OR Gate">
+      <a name="facing" val="south"/>
+      <a name="width" val="3"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(90,680)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="3"/>
+      <a name="label" val="rKB"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1300,390)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff5c00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(1000,800)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="7" loc="(400,570)" name="log_1x1"/>
+    <comp lib="10" loc="(300,930)" name="computeIntresection"/>
+    <comp lib="5" loc="(1000,1190)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff0032"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="1" loc="(140,1790)" name="OR Gate">
+      <a name="facing" val="west"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="5" loc="(700,1070)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#000000"/>
+      <a name="offcolor" val="#b0b0b0"/>
+    </comp>
+    <comp lib="5" loc="(700,690)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff5c00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(1300,890)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ffbe00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1300,1050)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#121211"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(370,460)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="value" val="0xa"/>
+    </comp>
+    <comp lib="10" loc="(300,1030)" name="computeIntresection"/>
+    <comp lib="5" loc="(400,1070)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#000000"/>
+      <a name="offcolor" val="#b0b0b0"/>
+    </comp>
+    <comp lib="1" loc="(2350,40)" name="Controlled Buffer">
+      <a name="facing" val="south"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="5" loc="(1300,770)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="5" loc="(1310,470)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(150,410)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="5" loc="(700,270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp loc="(200,1450)" name="stopGame"/>
+    <comp lib="5" loc="(400,450)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(1000,1250)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#572a00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(370,1460)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(2400,700)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="in/out"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="1" loc="(2360,30)" name="NOT Gate">
+      <a name="facing" val="west"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="5" loc="(1000,1150)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#000000"/>
+      <a name="offcolor" val="#b0b0b0"/>
+    </comp>
+    <comp lib="0" loc="(380,1060)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="4"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(400,1170)" name="SUVDriver"/>
+    <comp lib="5" loc="(1010,770)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(400,800)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="0" loc="(250,1700)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="3"/>
+      <a name="label" val="lKB"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(1000,470)" name="log_3x2"/>
+    <comp lib="0" loc="(770,1620)" name="Tunnel">
+      <a name="label" val="restartGame"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(2610,610)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="win"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(700,840)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="5" loc="(1000,540)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(410,670)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(1000,1170)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#572a00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(150,710)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="5" loc="(1300,370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="0" loc="(140,1120)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="5" loc="(1300,300)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(1300,750)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="0" loc="(210,1460)" name="Tunnel">
+      <a name="label" val="restartGame"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1300,990)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ffffff"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(290,1090)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0x11"/>
+    </comp>
+    <comp lib="0" loc="(1810,560)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+      <a name="label" val="I/Odat"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1970,1110)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="32"/>
+      <a name="matrixrows" val="32"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="5" loc="(700,570)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(700,1270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1300,1190)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff0032"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(710,970)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(2160,60)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="32"/>
+      <a name="matrixrows" val="32"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="5" loc="(700,150)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="12"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="0" loc="(570,1580)" name="Tunnel">
+      <a name="label" val="in/out"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1000,570)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(1300,500)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(700,1290)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ffbe00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(150,1530)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(160,630)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(390,860)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="6"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(140,1240)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="1" loc="(130,1420)" name="Controlled Buffer">
+      <a name="facing" val="west"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="5" loc="(1670,910)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="15"/>
+      <a name="matrixrows" val="15"/>
+      <a name="color" val="#ff2012"/>
+      <a name="offcolor" val="#bd2a5d"/>
+    </comp>
+    <comp lib="9" loc="(2770,1430)" name="digits"/>
+    <comp lib="5" loc="(1010,870)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(150,640)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x2"/>
+    </comp>
+    <comp lib="9" loc="(1070,1590)" name="max height"/>
+    <comp lib="9" loc="(2330,1110)" name="current score"/>
+    <comp lib="10" loc="(170,620)" name="rightShifter"/>
+    <comp lib="0" loc="(150,450)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(600,1610)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="I/Odat"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(330,250)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="resPlOk"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(300,1400)" name="Probe">
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="5" loc="(1650,1110)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="32"/>
+      <a name="matrixrows" val="32"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="0" loc="(2520,700)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1000,670)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="7" loc="(1000,1070)" name="bolidDriver"/>
+    <comp lib="5" loc="(460,1570)" name="Button">
+      <a name="color" val="#ff0000"/>
+      <a name="label" val="res"/>
+    </comp>
+    <comp lib="0" loc="(720,1620)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IAck"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(700,990)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ffffff"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1670,1430)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="20"/>
+      <a name="matrixrows" val="30"/>
+      <a name="color" val="#ff0100"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="5" loc="(2350,1430)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="20"/>
+      <a name="matrixrows" val="30"/>
+      <a name="color" val="#ff0100"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="10" loc="(380,560)" name="heightFlag"/>
+    <comp lib="7" loc="(1300,170)" name="finishConnector"/>
+    <comp lib="7" loc="(1300,1170)" name="SUVDriver"/>
+    <comp lib="5" loc="(410,870)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="7" loc="(700,470)" name="log_3x2"/>
+    <comp lib="0" loc="(280,440)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="1bAnim"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1300,470)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="10" loc="(300,630)" name="smallLogIntersect"/>
+    <comp lib="5" loc="(1900,160)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="20"/>
+      <a name="matrixrows" val="30"/>
+      <a name="color" val="#ff0100"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="0" loc="(2460,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="in/out"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="9" loc="(560,1580)" name="CdM-8"/>
+    <comp lib="5" loc="(1000,370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="0" loc="(160,1250)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="2"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1310,1370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(150,340)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="5" loc="(700,1190)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff0032"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="7" loc="(1000,870)" name="truckDriver"/>
+    <comp lib="5" loc="(710,870)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(700,340)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(140,920)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x2"/>
+    </comp>
+    <comp lib="10" loc="(300,230)" name="finishComputer"/>
+    <comp lib="0" loc="(290,590)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0x7"/>
+    </comp>
+    <comp lib="0" loc="(370,230)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="value" val="0xc"/>
+    </comp>
+    <comp lib="9" loc="(1650,1110)" name="record score"/>
+    <comp lib="5" loc="(1300,1440)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="5" loc="(1300,1290)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ffbe00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(380,360)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="11"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(2620,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="restartGame"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(2460,700)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="I/Osel"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1840,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="I/Osel"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(400,300)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(1310,570)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(700,470)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(180,1790)" name="Tunnel">
+      <a name="label" val="time is gone"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(2150,380)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="32"/>
+      <a name="matrixrows" val="20"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#bdbdbd00"/>
+    </comp>
+    <comp lib="5" loc="(1010,270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(300,1380)" name="Probe">
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="5" loc="(400,390)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff5c00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(1000,1440)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="7" loc="(400,470)" name="log_3x2"/>
+    <comp lib="0" loc="(1810,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="label" val="I/Oadr"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(140,1020)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="10" loc="(380,760)" name="heightFlag"/>
+    <comp lib="5" loc="(400,500)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(1000,970)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#121211"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1300,670)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(2330,1110)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="32"/>
+      <a name="matrixrows" val="32"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="10" loc="(380,230)" name="heightFlag"/>
+    <comp lib="0" loc="(1720,560)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="in/out"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(2440,40)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="res"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(140,1040)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="5" loc="(1310,870)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="7" loc="(1300,970)" name="carConnectorV2"/>
+    <comp lib="0" loc="(940,1570)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="res"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(700,770)" name="swampDriver"/>
+    <comp lib="5" loc="(1000,690)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff5c00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(700,370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="0" loc="(260,1090)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="5" loc="(1010,970)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(370,1060)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="value" val="0x4"/>
+    </comp>
+    <comp lib="10" loc="(300,530)" name="waterIntersect"/>
+    <comp lib="5" loc="(80,1670)" name="Keyboard"/>
+    <comp lib="5" loc="(1310,370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(370,660)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="value" val="0x8"/>
+    </comp>
+    <comp lib="0" loc="(70,1750)" name="Tunnel">
+      <a name="label" val="restartGame"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(300,1320)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="1"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1010,670)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(400,1150)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#000000"/>
+      <a name="offcolor" val="#b0b0b0"/>
+    </comp>
+    <comp lib="0" loc="(150,750)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="3"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="10" loc="(160,1220)" name="rightShifter"/>
+    <comp lib="5" loc="(1300,1350)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(300,720)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="7"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1000,950)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="10" loc="(160,1330)" name="leftShifter"/>
+    <comp lib="5" loc="(710,1070)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(400,840)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="5" loc="(400,1440)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="0" loc="(2520,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="I/Osel"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(410,370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(2490,700)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+      <a name="label" val="I/Odat"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1000,890)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ffbe00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="10" loc="(380,1460)" name="heightFlag"/>
+    <comp lib="5" loc="(710,570)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(380,690)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="1bAnim"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(320,230)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="12"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(700,970)" name="carConnectorV2"/>
+    <comp lib="8" loc="(260,1740)" name="keyboard"/>
+    <comp lib="7" loc="(1000,1170)" name="SUVDriver"/>
+    <comp lib="0" loc="(290,490)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0x19"/>
+    </comp>
+    <comp lib="5" loc="(1300,1070)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#000000"/>
+      <a name="offcolor" val="#b0b0b0"/>
+    </comp>
+    <comp lib="10" loc="(160,1020)" name="rightShifter"/>
+    <comp lib="5" loc="(700,450)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="7" loc="(700,1170)" name="SUVDriver"/>
+    <comp lib="0" loc="(300,520)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="9"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(2620,640)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="20"/>
+      <a name="matrixrows" val="30"/>
+      <a name="color" val="#ff0100"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="5" loc="(2770,1430)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="20"/>
+      <a name="matrixrows" val="30"/>
+      <a name="color" val="#ff0100"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="0" loc="(490,1570)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="restartGame"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(170,230)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="rescue"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(1000,970)" name="carConnectorV2"/>
+    <comp lib="0" loc="(970,1620)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="bump"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(380,960)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="5"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1310,1270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(370,1160)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="value" val="0x3"/>
+    </comp>
+    <comp lib="5" loc="(2090,1430)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="20"/>
+      <a name="matrixrows" val="30"/>
+      <a name="color" val="#ff0100"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="5" loc="(1000,1090)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff005f"/>
+      <a name="offcolor" val="#b0b0b0"/>
+    </comp>
+    <comp lib="0" loc="(140,1790)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="bump"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1060,1610)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(1300,570)" name="log_1x1"/>
+    <comp lib="0" loc="(380,460)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="10"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(140,1350)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="3"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="9" loc="(150,1500)" name="tact by level">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="10" loc="(170,730)" name="leftShifter"/>
+    <comp lib="0" loc="(940,1640)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="rescue"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(240,1380)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="intersection"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(370,860)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="value" val="0x6"/>
+    </comp>
+    <comp lib="0" loc="(170,350)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="11"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1000,300)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(1060,1570)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(290,220)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="win"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(400,670)" name="turtle_3x1"/>
+    <comp lib="1" loc="(2640,620)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="7" loc="(700,870)" name="truckDriver"/>
+    <comp lib="0" loc="(460,1590)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="IRQ"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(410,770)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="10" loc="(380,360)" name="heightFlag"/>
+    <comp lib="0" loc="(380,760)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="7"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(710,1270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(170,550)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="9"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(130,1450)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="level clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(380,660)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="8"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1840,910)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="15"/>
+      <a name="matrixrows" val="15"/>
+      <a name="color" val="#ff2012"/>
+      <a name="offcolor" val="#bd2a5d"/>
+    </comp>
+    <comp lib="5" loc="(700,390)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff5c00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(400,1190)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff0032"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1300,840)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="5" loc="(400,870)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="9" loc="(2350,1430)" name="digits"/>
+    <comp lib="5" loc="(400,1250)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#572a00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(150,610)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="5" loc="(400,1400)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="5" loc="(410,570)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(400,1350)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="10" loc="(300,430)" name="2_1turtlesIntersector"/>
+    <comp lib="5" loc="(1300,570)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(2350,20)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="level clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(410,470)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(410,1170)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(300,1420)" name="Probe">
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="5" loc="(400,770)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="5" loc="(700,600)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="10" loc="(300,1130)" name="computeIntresection"/>
+    <comp lib="5" loc="(700,640)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(400,1170)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#572a00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="10" loc="(380,1360)" name="heightFlag"/>
+    <comp lib="1" loc="(110,1680)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(600,1590)" name="Tunnel">
+      <a name="width" val="4"/>
+      <a name="label" val="I/Oadr"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1050,1590)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="res"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(2310,40)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="time is gone"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1000,770)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="9" loc="(1650,580)" name="lives"/>
+    <comp lib="5" loc="(700,750)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(1300,150)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="12"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="10" loc="(170,320)" name="rightShifter"/>
+    <comp lib="0" loc="(290,1290)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0x14"/>
+    </comp>
+    <comp lib="7" loc="(1300,270)" name="log_2x1"/>
+    <comp lib="0" loc="(290,990)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0xa"/>
+    </comp>
+    <comp lib="7" loc="(1300,670)" name="turtle_3x1"/>
+    <comp lib="5" loc="(700,1150)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#000000"/>
+      <a name="offcolor" val="#b0b0b0"/>
+    </comp>
+    <comp lib="5" loc="(1300,950)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1000,750)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="7" loc="(700,170)" name="finishConnector"/>
+    <comp lib="5" loc="(1300,1170)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#572a00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(380,560)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="9"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1300,800)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="10" loc="(170,430)" name="leftShifter"/>
+    <comp lib="5" loc="(1000,870)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1300,270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(380,1460)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="0"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(810,1590)" name="Tunnel">
+      <a name="label" val="IRQ"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1000,600)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(1300,690)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff5c00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(1000,1050)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#121211"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="9" loc="(2330,720)" name="number of saved frogs / victory / lose"/>
+    <comp lib="5" loc="(700,1350)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1000,640)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(70,1560)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(400,370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="7" loc="(1000,170)" name="finishConnector"/>
+    <comp lib="0" loc="(770,1600)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="vector"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="9" loc="(1670,1430)" name="digits"/>
+    <comp lib="7" loc="(400,970)" name="carConnectorV2"/>
+    <comp lib="9" loc="(1880,1430)" name="digits"/>
+    <comp lib="0" loc="(130,1510)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="rescue"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1000,1070)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#000000"/>
+      <a name="offcolor" val="#b0b0b0"/>
+    </comp>
+    <comp lib="5" loc="(1010,470)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(2640,620)" name="Tunnel">
+      <a name="label" val="event"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1300,340)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="10" loc="(300,330)" name="waterIntersect"/>
+    <comp lib="5" loc="(1000,390)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff5c00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(400,1370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="5" loc="(400,750)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="5" loc="(2650,1110)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="32"/>
+      <a name="matrixrows" val="32"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="5" loc="(400,670)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="7" loc="(1300,1370)" name="swampDriver"/>
+    <comp lib="5" loc="(1650,580)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="32"/>
+      <a name="matrixrows" val="32"/>
+      <a name="color" val="#ff2012"/>
+      <a name="offcolor" val="#bd2a5d"/>
+    </comp>
+    <comp lib="1" loc="(90,680)" name="OR Gate">
+      <a name="facing" val="south"/>
+      <a name="width" val="3"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="5" loc="(400,1050)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#121211"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="7" loc="(400,1070)" name="bolidDriver"/>
+    <comp lib="5" loc="(710,670)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(140,1220)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="2"/>
+      <a name="value" val="0x2"/>
+    </comp>
+    <comp lib="0" loc="(240,1360)" name="Pull Resistor">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(270,1720)" name="Tunnel">
+      <a name="width" val="3"/>
+      <a name="label" val="rKB"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(2430,700)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="label" val="I/Oadr"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(700,670)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="10" loc="(160,1130)" name="leftShifter"/>
+    <comp lib="7" loc="(1300,870)" name="truckDriver"/>
+    <comp lib="5" loc="(710,1370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(280,380)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="res"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1300,1270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(1840,560)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1300,1150)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#000000"/>
+      <a name="offcolor" val="#b0b0b0"/>
+    </comp>
+    <comp lib="5" loc="(2480,60)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="32"/>
+      <a name="matrixrows" val="32"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="7" loc="(1300,1070)" name="bolidDriver"/>
+    <comp lib="0" loc="(160,960)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="5"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(170,650)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="8"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(1000,1270)" name="truckDriver"/>
+    <comp lib="0" loc="(380,1360)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="1"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(400,950)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(290,1190)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0xa"/>
+    </comp>
+    <comp lib="0" loc="(380,1260)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="2"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1100,1630)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="good jump"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1300,640)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="7" loc="(400,1370)" name="swampDriver"/>
+    <comp lib="0" loc="(370,560)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="value" val="0x9"/>
+    </comp>
+    <comp lib="5" loc="(1000,470)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(50,1740)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="stop"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="10" loc="(160,930)" name="leftShifter"/>
+    <comp lib="0" loc="(140,950)" name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="3"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="5" loc="(1000,270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(410,1270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="7" loc="(1000,770)" name="swampDriver"/>
+    <comp lib="0" loc="(2550,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="8"/>
+      <a name="label" val="I/Odat"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1750,560)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="label" val="I/Oadr"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="10" loc="(380,960)" name="heightFlag"/>
+    <comp lib="0" loc="(2380,30)" name="Tunnel">
+      <a name="label" val="stop"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(290,290)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0x11"/>
+    </comp>
+    <comp lib="7" loc="(400,370)" name="turtle_2x1"/>
+    <comp lib="5" loc="(1310,970)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(290,390)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0x10"/>
+    </comp>
+    <comp lib="5" loc="(1000,340)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(2580,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="clock"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(370,1260)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="value" val="0x2"/>
+    </comp>
+    <comp lib="10" loc="(300,1230)" name="computeIntresection"/>
+    <comp lib="5" loc="(410,1370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(1000,1370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="7" loc="(1300,1270)" name="truckDriver"/>
+    <comp lib="5" loc="(400,270)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(380,230)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="12"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(1300,470)" name="log_3x2"/>
+    <comp lib="0" loc="(720,1580)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="bump"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1080,1620)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="res"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1000,450)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#83ff00"/>
+      <a name="offcolor" val="#002bff"/>
+    </comp>
+    <comp lib="0" loc="(170,460)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="10"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(1080,1580)" name="Tunnel">
+      <a name="width" val="4"/>
+      <a name="label" val="Y"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="9" loc="(2560,1430)" name="digits"/>
+    <comp lib="5" loc="(1000,500)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(1780,1090)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="in/out"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1000,1290)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ffbe00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(1690,160)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="20"/>
+      <a name="matrixrows" val="30"/>
+      <a name="color" val="#ff0100"/>
+      <a name="offcolor" val="#32bd7a"/>
+    </comp>
+    <comp lib="7" loc="(400,170)" name="finishConnector"/>
+    <comp lib="7" loc="(700,570)" name="log_1x1"/>
+    <comp lib="1" loc="(160,1430)" name="NOT Gate">
+      <a name="facing" val="west"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="5" loc="(400,340)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(160,1050)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="4"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="7" loc="(1000,1370)" name="swampDriver"/>
+    <comp lib="0" loc="(290,890)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="5"/>
+      <a name="value" val="0x14"/>
+    </comp>
+    <comp lib="5" loc="(700,800)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="5" loc="(1300,1370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="9" loc="(1900,160)" name="digits"/>
+    <comp lib="0" loc="(380,1160)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="3"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(700,1170)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#572a00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="5" loc="(700,540)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="10" loc="(380,660)" name="heightFlag"/>
+    <comp lib="5" loc="(700,950)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="2"/>
+      <a name="color" val="#363636"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="10" loc="(300,730)" name="waterIntersect"/>
+    <comp lib="5" loc="(400,470)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(1300,540)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="0" loc="(300,920)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="5"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(300,620)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="8"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(180,1810)" name="Tunnel">
+      <a name="label" val="intersection"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(300,1220)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="2"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="0" loc="(370,960)" name="Constant">
+      <a name="facing" val="south"/>
+      <a name="width" val="4"/>
+      <a name="value" val="0x5"/>
+    </comp>
+    <comp lib="7" loc="(1000,670)" name="turtle_3x1"/>
+    <comp lib="5" loc="(700,500)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(700,890)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ffbe00"/>
+      <a name="offcolor" val="#aba9aa"/>
+    </comp>
+    <comp lib="0" loc="(240,1090)" name="Probe">
+      <a name="facing" val="south"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="5" loc="(1000,1400)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="4" loc="(80,1710)" name="S-R Flip-Flop"/>
+    <comp lib="5" loc="(1010,570)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="7" loc="(1300,770)" name="swampDriver"/>
+    <comp lib="5" loc="(710,370)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="5" loc="(700,770)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#7fb500"/>
+      <a name="offcolor" val="#0023bf"/>
+    </comp>
+    <comp lib="5" loc="(400,600)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="4"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="5" loc="(400,540)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="3"/>
+      <a name="color" val="#ad4500"/>
+      <a name="offcolor" val="#002fff"/>
+    </comp>
+    <comp lib="7" loc="(700,1270)" name="truckDriver"/>
+    <comp lib="0" loc="(740,1560)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="rescue"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(710,1170)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="7" loc="(700,370)" name="turtle_2x1"/>
+    <comp lib="5" loc="(400,1090)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="6"/>
+      <a name="color" val="#ff005f"/>
+      <a name="offcolor" val="#b0b0b0"/>
+    </comp>
+    <comp lib="0" loc="(900,1620)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="restartGame"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+    <comp lib="5" loc="(1310,1070)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="30"/>
+      <a name="matrixrows" val="10"/>
+      <a name="color" val="#00e33d"/>
+      <a name="offcolor" val="#aba9aa00"/>
+    </comp>
+    <comp lib="0" loc="(1780,560)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="I/Osel"/>
+      <a name="labelfont" val="SansSerif plain 9"/>
+    </comp>
+  </circuit>
+  <circuit name="stopGame">
+    <a name="circuit" val="stopGame"/>
+    <a name="clabel" val="stop"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <path d="M61,51 Q65,61 69,51" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="19" stroke="#000000" stroke-width="2" width="29" x="45" y="45"/>
+      <circ-port height="8" pin="200,350" width="8" x="46" y="46"/>
+      <circ-port height="8" pin="200,370" width="8" x="56" y="46"/>
+      <circ-port height="10" pin="410,330" width="10" x="65" y="45"/>
+      <circ-port height="8" pin="390,340" width="8" x="66" y="56"/>
+      <circ-anchor facing="east" height="6" width="6" x="67" y="47"/>
+    </appear>
+    <wire from="(350,220)" to="(410,220)"/>
+    <wire from="(210,380)" to="(270,380)"/>
+    <wire from="(210,370)" to="(210,380)"/>
+    <wire from="(390,330)" to="(390,340)"/>
+    <wire from="(270,340)" to="(270,350)"/>
+    <wire from="(270,370)" to="(270,380)"/>
+    <wire from="(280,260)" to="(280,270)"/>
+    <wire from="(380,320)" to="(380,330)"/>
+    <wire from="(360,320)" to="(360,330)"/>
+    <wire from="(260,340)" to="(260,360)"/>
+    <wire from="(340,250)" to="(340,270)"/>
+    <wire from="(370,270)" to="(370,290)"/>
+    <wire from="(260,250)" to="(260,340)"/>
+    <wire from="(290,250)" to="(320,250)"/>
+    <wire from="(340,270)" to="(370,270)"/>
+    <wire from="(320,270)" to="(340,270)"/>
+    <wire from="(280,270)" to="(300,270)"/>
+    <wire from="(280,320)" to="(300,320)"/>
+    <wire from="(410,220)" to="(410,330)"/>
+    <wire from="(340,330)" to="(360,330)"/>
+    <wire from="(200,350)" to="(220,350)"/>
+    <wire from="(260,250)" to="(270,250)"/>
+    <wire from="(380,330)" to="(390,330)"/>
+    <wire from="(210,370)" to="(220,370)"/>
+    <wire from="(250,360)" to="(260,360)"/>
+    <wire from="(200,370)" to="(210,370)"/>
+    <comp lib="1" loc="(300,270)" name="NOT Gate">
+      <a name="facing" val="west"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="4" loc="(350,220)" name="D Flip-Flop"/>
+    <comp lib="3" loc="(340,330)" name="Comparator">
+      <a name="width" val="5"/>
+      <a name="mode" val="unsigned"/>
+    </comp>
+    <comp lib="0" loc="(200,370)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="event"/>
+    </comp>
+    <comp lib="4" loc="(280,320)" name="Counter">
+      <a name="width" val="5"/>
+      <a name="max" val="0x1f"/>
+    </comp>
+    <comp lib="0" loc="(390,340)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="restart"/>
+    </comp>
+    <comp lib="0" loc="(410,330)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="stopper"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(250,360)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(200,350)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="tact"/>
+    </comp>
+    <comp lib="1" loc="(290,250)" name="Controlled Buffer"/>
+    <comp lib="1" loc="(370,290)" name="OR Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(300,340)" name="Constant">
+      <a name="width" val="5"/>
+      <a name="value" val="0x1d"/>
+    </comp>
+    <comp lib="1" loc="(270,350)" name="NOT Gate">
+      <a name="facing" val="north"/>
+      <a name="size" val="20"/>
+    </comp>
+  </circuit>
+  <circuit name="latency">
+    <a name="circuit" val="latency"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <path d="M51,59 Q55,69 59,59" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="none" height="9" stroke="#000000" stroke-width="2" width="19" x="46" y="56"/>
+      <circ-port height="8" pin="30,10" width="8" x="46" y="56"/>
+      <circ-port height="10" pin="1110,10" width="10" x="55" y="55"/>
+      <circ-anchor facing="east" height="6" width="6" x="57" y="57"/>
+    </appear>
+    <comp lib="1" loc="(450,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(850,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(150,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(270,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(350,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(750,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(90,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(970,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(30,10)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="in"/>
+    </comp>
+    <comp lib="1" loc="(410,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(250,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(1070,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(990,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(170,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(610,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(950,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(530,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(570,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(390,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(830,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(290,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(310,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(550,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(230,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(770,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(630,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(110,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(1030,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(710,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(1050,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(890,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(490,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(930,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(1010,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(1110,10)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(470,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(430,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(130,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(70,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(910,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(330,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(210,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(510,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(810,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(730,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(650,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(690,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(1110,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(790,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(590,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(670,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(50,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(870,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(370,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(190,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="1" loc="(1090,10)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+  </circuit>
+</project>
